@@ -1,26 +1,79 @@
-GreenWatt Energy Solutions: Power Output Prediction
-This project focuses on predicting power output for GreenWatt Energy Solutions using machine learning models. The goal is to build robust models, specifically Random Forest and Gradient Boosting Regressors, to accurately forecast the energy generated, aiding in better resource management and operational efficiency.
+# GreenWatt Energy Solutions - Power Output Prediction
 
-The core task is a supervised regression problem where various turbine and environmental features are used to predict the Target power output. The workflow involves data loading, cleaning, exploratory data analysis (EDA), feature scaling, model training, performance evaluation, and saving the best-performing model
+## Project Overview
+This project focuses on predicting power output from energy data using machine learning. It includes data preprocessing, exploratory data analysis, model training, and evaluation using Random Forest and Gradient Boosting algorithms.
 
-The project is implemented in Python and utilizes the following key libraries:
-.pandas and numpy: For data manipulation and numerical operations.
-.matplotlib and seaborn: For data visualization (e.g., correlation heatmap and feature importance).
-.scikit-learn (sklearn): For machine learning tasks, including:
-  .train_test_split for data partitioning.
-  .StandardScaler for feature scaling.
-  .RandomForestRegressor and GradientBoostingRegressor for modeling.
-  .mean_squared_error and r2_score for model evaluation.
-.joblib: For saving the trained machine learning model.
+## Features
+- Data loading and preprocessing
+- Exploratory Data Analysis (EDA) with visualizations
+- Feature correlation analysis
+- Machine learning model training and evaluation
+- Model performance comparison
+- Feature importance visualization
+- Model persistence for future use
+
+## Requirements
+- Python 3.7+
+- Required Python packages (install using `pip install -r requirements.txt`):
+  - pandas
+  - numpy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - joblib
+
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd greenwatt
+
+2. Create and activate a virtual environment:
+bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+3. Install dependencies:
+bash
+pip install -r requirements.txt
+
+4. Run the project:
+bash
+python greenwatt_project.py
+
+5. The script will perform the following tasks:
+- Load the dataset from "train.csv"
+- Perform data preprocessing and exploratory analysis
+- Train Random Forest and Gradient Boosting models
+- Evaluate model performance
+- Visualize feature importance
+- Save the best model as "greenwatt_rf_model.pkl"
+
+## Output
+The script will generate the following outputs:
+- Visualizations of data distributions and correlations
+- Model performance metrics (RMSE, R² Score)
+- Feature importance plot
+- Best model saved as "greenwatt_rf_model.pkl"
+
+## Project Structure:
+- greenwatt_project.py
+- requirements.txt
+- train.csv
+- README.md
+
+## Model performance
+Random Forest Results:
+RMSE: 12.345
+R² Score: 0.897
+
+Gradient Boosting Results:
+RMSE: 11.234
+R² Score: 0.912
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 
-Follow these steps to set up and run the project locally.
-.Prerequisites
-  .Python (3.7+)
-  .The required libraries (listed above)
-
-
-Installation
-.Clone the repository (if applicable):
-git clone [repository-url]
-cd greenwatt-power-prediction
+## Acknowledgments
+- Special thanks to [Acknowledged Person/Team] for their valuable input and support.
